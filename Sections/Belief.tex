@@ -1,13 +1,25 @@
-%This section describes in a better what knowledge the robo-theatre need to handle and how this knowledge change and adapt in time.%
+General description of the structures used for knowledge representation from the agent's perspective. Also we need to specify the models used that allow this knowledge to change and generate new beliefs about the world and itself.
 
-General description of the structures used for knowledge representation from the agent's perspective. Also we need to specify the models used that allow this knowledge to change.
+\subsection{Sensory information and processing}
+Sense information depends of the capabilities of the robotic platform, that means what the sensors are and what kind of information captures. Depending these information, process and classify useful information 
 
-Description of sensorial processing, briefly explanation of which sensorial info is processed.
-
-Description of world model(How is represented the physical world).
+\subsection{The world model}
+The world model in the robo-actor agent refers to space and object representation present in the scenario. This representation is achieve as space-relational graph between objects. this relations 
 
 Description of social world model(How is represented the others' emotions).
 
-Description of the structure of the delegated goals.
+\subsection{The delegated goals}
+The delegated goals are those responsibilities that the agent have respect a his character. This delegated goals are managed by the script and specifies what the agent has to reached in a very instant of the play.
 
-Description of how is represented relationship between characters in the Relational social world model.
+The structure of the goal is define as follows:
+\begin{itemize}
+\item The pre-condition of the goal, which indicate the facts that must be true for consider the goal as a potential goal to become a desire.
+
+\item The post-condition, which is the desire state of the world, it means those facts that the agent want to be true.
+
+\item The plan of action, which is a predefined graph of simple actions that trace the path the agent have to follow in order to reach the goal's post-condition. With the graph representation the actions could be executed in parallel.
+\end{itemize}
+
+This structure of the goal also applies to the desires and intention, which are goals in different stages of the deliberative process. 
+
+\todo[inline]{Description of how is represented relationship between characters in the Relational social world model.}

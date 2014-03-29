@@ -1,10 +1,26 @@
-This section describe the deliberation process in the BDI context.
-\todo[inline]{I think that in this section would should to put all the focus, which is the main topic of the workshop}
-\todo[inline]{Explain how the script gives information for the cooperation.}
+This section describes the deliberation process of the agent based in the practical reasoning theory called BDI (Belief-Desires-Intention) model. This model approach to a reasoning of the agent with limited resources and capabilities, opening the process to the idea of uncertainly which in cases with highly dynamic conditions it have demonstrated to be successful. Understand the BDI model imply understand how its three key features works.
+
+The beliefs represent knowledge or fact about his environment. In this case this knowledge was encapsulate by the belief manager in previous section. This knowledge can vary on time and in wide range of manners.
+
+The desires are goals that the agent wants to achieve. In a practical point of view the desires represent the ideal state of the world for an agent.
+
+The intentions represent the commitment with the agents some of its desires, it means that the agent not only pursuit the accomplishment of its desires but also plan how to act in concordance to them. Depend on how strong the commitment is, the intention lead the agent to take action.
+
 \subsection{Cooperation Manager}
+
+The cooperation manager is on charge of communication with other robo-actor agents. For this purpose is proposed a specialized channel of communication when the messages are FIPA compliant. Two steps are considered in the process of cooperation, which is included directly influence the BDI model. 
+
+Firstly, a simple step, only through implicit synchronization guided by the script, in which participants are clearly described when a cooperative action is needed.
+
+This first step allow to both agents perceive a specific desire as cooperative, and be ready for negotiation. As it is guided for the script the script has an explicit definition of a cooperative action, with this information the belief system can create the delegated goals marking those who needs cooperation.
+
+\todo[inline]{Could be included in the script the possibility of timing information for the action}
+
+The second stage is much more complex that requires a communication protocol that ends with the commitment of parts involved in the cooperation. 
+
+When an agent set a cooperative delegated goal as a desire immediately search for the ideal partners for achieve it. Then the first message is send  as a petition to the group of ideal partners. At this point every partner cannot reply to the message for lack of interest in the cooperative action or ignorance about the action. at the other hand in the positive case, the agent reply affirmative to the source of petition.
+The agent source of the petition adquires the responsibility of determine when the cooperative desire is possible or impossible based on the numbers of agents that have been response willing to cooperate. When the desire becomes possible the agent send a synchronization signal that also works as a commitment message, putting the cooperative desire as an intention
+
+This both steps described above, allows effective coordination within the BDI model. 
+
 \todo[inline]{Example}
-Description of when a goal is considered a desire and how its represented.
-
-Description of how and when a goal becomes an intention.
-
-Detail description of the cooperation process and how this affect the normal deliberation process, specifically the evaluation of agent desires.
