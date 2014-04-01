@@ -5,6 +5,7 @@ The beliefs represent knowledge or fact about its environment. In this case, the
 The desires are goals that the agent wants to achieve. In a practical point of view the desires represent the ideal state of the world for an agent.
 
 The intentions represent the commitment with the agents some of its desires, it means that the agent not only pursuit the accomplishment of its desires but also plan how to act in concordance to them. Depend on how strong the commitment is, the intention lead the agent to take action.
+\todo[inline]{It is missing a paragraph explaining how all this theory is related in the architecture}
 
 \subsection{Goals life-cycle}
 
@@ -13,13 +14,13 @@ The deliberation process is summarized in a simultaneous evaluation of agent's g
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{Images/GoalManagement.png} 
-	\caption{GoalManagement. This figure show the goal states in his life-cycle.}
+	\caption{GoalManagement. This figure show the goal states in his life-cycle. \todo[inline]{this figure is not used in any part of the text}}
 	\label{fig:GoalManager}
 \end{figure}
 
-The goals the agent knows are those  delegated by the script and those that are attached to the robotic behavior, like recharge batteries or preserve its own integrity. These goals receive the name of potential goals. 
+The goals the agent knows are those  delegated by the script and those that are attached to the robotic behaviour, like recharge batteries or preserve its own integrity. These goals receive the name of potential goals. 
 
-When a potential goal satisfies its preconditions the goal becomes an active goal. At this point, the agent check if are exists the abilities and resources needed to complete the goal. If not, the goal remains as a potential goal. If there is enough tools and resources the goal becomes a viable goal. 
+When a potential goal satisfies its preconditions the goal becomes an active goal. At this point, the agent check if are exists the abilities and resources needed to complete the goal. If not, the goal remains as a potential goal. If there is enough tools and resources the goal becomes a viable goal. \todo[inline]{how is this done?} 
 
 Finally to the decide what of the viable goals becomes an intention, they compete in two aspects. First, the goals compete by priority, the agent with maximum priority wins. If there is more than one in the maximum priority the goals compete with their contribution values and probability of success (which is an estimated).
 
@@ -51,5 +52,3 @@ When an agent set a cooperative delegated goal as a desire immediately search fo
 The agent source of the petition acquires the responsibility of determine when the cooperative desire is possible or impossible based on the numbers of agents that have been response willing to cooperate. When the desire becomes possible the agent send a synchronization signal that also works as a commitment message, putting the cooperative desire as an intention
 
 This both steps described above, allows effective coordination within the BDI model. 
-
-\todo[inline]{Example}

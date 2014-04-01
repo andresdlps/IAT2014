@@ -1,25 +1,20 @@
-General description of the structures used for knowledge representation from the agent's perspective. Also we need to specify the models used that allow this knowledge to change and generate new beliefs about the world and itself.
-
-\subsection{Sensory information and processing}
-Sense information depends of the capabilities of the robotic platform, that means what the sensors are and what kind of information captures. Depending these information, process and classify useful information 
-
-\subsection{The world model}
-The world model in the robo-actor agent refers to space and object representation present in the scenario. This representation is achieve as space-relational graph between objects. this relations 
-
-Description of social world model(How is represented the others' emotions).
-
-\subsection{The delegated goals}
-The delegated goals are those responsibilities that the agent have respect a his character. This delegated goals are managed by the script and specifies what the agent has to reached in a very instant of the play.
-
-The structure of the goal is define as follows:
+This module encapsulate all the knowledge needed by the agent to make decisions. This module is divided in specialized sub-modules, which are in charge to have the information specific information and make inference from these. These sub-modules are:
 \begin{itemize}
-\item The pre-condition of the goal, which indicate the facts that must be true for consider the goal as a potential goal to become a desire.
-
-\item The post-condition, which is the desire state of the world, it means those facts that the agent want to be true.
-
-\item The plan of action, which is a predefined graph of simple actions that trace the path the agent have to follow in order to reach the goal's post-condition. With the graph representation the actions could be executed in parallel.
+	\item \textit{Sensory information and processing}: sense the robot's environment. Depending of the capabilities of the robotic platform, this module could capture meaningful information.
+	\item \textit{World model}: is the representation of the surround environment.
+	\item \textit{Social world model}: infers the current situation, and it has a the possible emotional state of the other people that are present.
+	\item \textit{Rational social model}: has the relation of the character with other people and roles.
+	\item \textit{Emotional model}: infers the emotional state based on the information coming from the social world model and rational social model.
+	\item \textit{Delegated goals}: are those responsibilities that the agent have to follow. This is given by the character. 
 \end{itemize}
+\subsection{The delegated goals}
+The delegated goals are an important component in the coordination because \todo[inline]{write why is important this in the coordination context}. This information is encapsulated in the script, and it gives \todo[inline]{write precisely which information gives this module}.\\ 
+The structure of one goal is define as follows:
+\begin{itemize}
+\item The pre-condition: indicates the facts that must be true for consider the goal as a potential goal to become a desire. \todo[inline]{write about what is a fact and how is recognized}
 
+\item The post-condition: is the desire state of the world, it means those facts that the agent want to be true. \todo[inline]{a little example}
+
+\item The plan of action: is a predefined graph of simple actions that trace the path the agent have to follow in order to reach the goal's post-condition. With the graph representation the actions could be executed in parallel. \todo[inline]{to general, give an concrete description of these.}
+\end{itemize}
 This structure of the goal also applies to the desires and intention, which are goals in different stages of the deliberative process. 
-
-\todo[inline]{Description of how is represented relationship between characters in the Relational social world model.}
