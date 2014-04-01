@@ -1,20 +1,11 @@
-The action description defines all the necessary information that are required to generate emotive action and personalize the system. This system is divided into parts: general, which described the information to generate the emotive actions. And Theatre, which describes the script and the current character that should be portrayed by 
+The action description defines all the necessary information that are required to generate emotive actions and personalize the system. This system is divided into parts: general, which described the information to generate the emotive actions. And Theatre, which describes the script and the current character that should be portrayed by 
 the robot.
-
 \subsection{Theatre}
-The theatre configuration is the component responsible for store and manage the traditional theatre artifact like the script, the character descriptor, the scenario and even the directors guidelines.
-
-\subsection{Action Profile}
-This action profile provides the available actions that the robot-actor can perform in scene. Each action in this configuration artifact has parameters that control the action. The  change in this parameters result a different perform to the same action opening doors to the modulation process.
-
-\todo[inline]{Description of the actions that is possible to perform}
-
-\subsection{Platform Description}
-The platform description maps the action profile of the agent to the current actions in the robot platform. This process involves also how parameters would be traduced to the platform.
-
-This artifact is highly related with the action profile and sensory processing. Every action described in the profile must have its correspondent representation in the platform. This coherence must exists in the sensory processing, since this process have to take into account what kind of information is receive for the robot's sensors.
-
-\todo[inline]{Example}
-\subsection{Emotion Profile}
-\todo[inline]{Description of the emotion profile}
-\todo[inline]{Example}
+The theatre configuration is the component responsible for store and manage the traditional theatre artefact like the script, the character descriptor, the scenario and even the directors guidelines.
+\subsection{General}
+The general configuration is components that are not limited just a theatre, and there are divided in three groups:
+\begin{itemize}
+	\item \textit{Actions}: describe the information about the actions that are available in the system. This information enable the user to create new actions based on the existing ones. 
+	\item \textit{Platform}: specify which actions could perform each platform, which allow the use the same script in different platforms.
+	\item \textit{Emotions}: have the information in how modify the actions to convey emotions. 
+\end{itemize} 
