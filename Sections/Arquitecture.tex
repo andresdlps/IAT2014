@@ -1,6 +1,4 @@
- The architecture was shaped through an iterative methodology called AOPOA and the starting point was the global agent's goal of perform a sequence of actions coherent with a given script. The AOPOA methodology allow the decomposition of goals in smaller goals until the desired granularity is reached. This section describes the final result of this methodology showing in the \ref{fig:generalArchitecture} In this view its shown the structural composition of an robo-actor as a subset of functional components, each component belongs to a group that encapsulate a specific internal process.
- 
- 
+The architecture was built through the iterative methodology called AOPOA and the starting point was the global agent's goal of perform a sequence of actions coherent with a given script. The AOPOA methodology allow the decomposition of goals in smaller goals until the desired granularity is reached. This section describes the final result of this methodology showing in the \ref{fig:generalArchitecture} In this view its shown the structural composition of an robo-actor as a subset of functional components, each component belongs to a group that encapsulate a specific internal process.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{Images/GeneralArchitecture.png} 
@@ -11,7 +9,7 @@
 
 \subsubsection{Belief Manager}
 
-This group handle the goal of maintain and update the mental state of the robo-actor agent. this goal is achieve in two different ways. First, the perception phase collect and process relevant information about the world and update its internal model of the world. Then, how is handle the emotional state of the robo-actor?. This is achieve through the script provided by the configuration module. It means, the emotional state and the belief about its social environment only occurred inside the play and its governed by the script definition.
+This group handle the goal of maintain and update the mental state of the robo-actor agent. This goal is achieve in two different ways. First, the perception phase collect and process relevant information about the world and update its internal model of the world. Then, how is handle the emotional state of the robo-actor?. This is achieve through the script provided by the configuration module. It means, the emotional state and the belief about its social environment only occurred inside the play and its governed by the script definition.
 
 \subsubsection{Motivation Manager}
 
