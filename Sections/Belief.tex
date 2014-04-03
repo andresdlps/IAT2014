@@ -8,12 +8,40 @@ This module encapsulate all the knowledge needed by the agent to make decisions.
 	\item \textit{Delegated goals}: are those responsibilities that the agent have to follow. This is given by the character. 
 \end{itemize}
 \subsection{The delegated goals}
-The delegated goals are an important component in the coordination because \todo[inline]{write why is important this in the coordination context}. This information is encapsulated in the script, and it gives \todo[inline]{write precisely which information gives this module}.\\ 
-The structure of one goal is define as follows:
-\begin{itemize}
-\item The pre-condition: indicates the facts that must be true for consider the goal as a potential goal to become a desire. \todo[inline]{write about what is a fact and how is recognized}
+The delegated goals are an important component for a robo-actor because encapsulates his functional purpose of acting. the whole structure and behavior of a play described in the script is represented as a knowledge in the agent. More specifically, this knowledge of a play is represented as a delegated goals, which is nothing more than an structured way that supports the motivation handler. 
 
-\item The post-condition: is the desire state of the world, it means those facts that the agent want to be true. \todo[inline]{a little example}
+This information is encapsulated in the script. Then, each line in the script artifact gives information about the current situation and emotional states of others. The current situation, consist of two kind of knowledge. 
+
+\begin{itemize}
+\item First, the space information. It encapsulate every object and person relative position in scene each time. 
+
+\item Second, the social information. It encapsulates emotions and mental states from others in scene.
+\end{itemize}
+
+The information doesn't have to be complete. It is only what matters at this moment so the play will be well developed.
+
+This script artifact can be imagined as a double linked list in which each node becomes a goal. This goal encapsulates knowledge for the current state (see \ref{fig:ScriptRepresentation}).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{Images/ScriptRepresentation.png} 
+	\caption{The script representation try to map the real script human-readable in terms that the agent could interpret as knowledge.}
+	\label{fig:ScriptRepresentation}
+\end{figure}
+
+
+Therefore, the structure of one goal is define as follows:
+\begin{itemize}
+
+\item The owner: Is the character or group of characters for which this goal is delegated.
+
+\item The performative: which is the dialog of the owner. This performative is optional, because the dialog is not required in all cases in theatre context.
+
+\item The pre-condition: indicates the facts that must be true for consider the goal as a potential goal to become a desire.
+
+\item The post-condition: is the desire state of the world, it means those facts that the agent want to be true.
+
+A fact is a true predicate (at least, true for the agent) about the world, this includes both social and space information. For example, a fact about space: "there is a table". This fact provides information about the existence of a object in scene. If is necessary more accurate information about a space fact, it could be indicated adding in which stage division the object is or adding spacial relationships like "the chair is to the right of the table". In the other hand, social information can be "Anna coughing and angry". In this case could be specified an action or an emotion about any other character.
 
 \item The plan of action: is a predefined graph of simple actions that trace the path the agent have to follow in order to reach the goal's post-condition. With the graph representation the actions could be executed in parallel. \todo[inline]{to general, give an concrete description of these.}
 \end{itemize}

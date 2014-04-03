@@ -9,18 +9,18 @@ The intentions represent the commitment with the agents some of its desires, it 
 
 \subsection{Goals life-cycle}
 
-The deliberation process is summarized in a simultaneous evaluation of agent's goals, in which the goals acquire different states.
+The deliberation process is summarized in a simultaneous evaluation of agent's goals, in which the goals acquire different states (see Figure \ref{fig:GoalManager}).
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{Images/GoalManagement.png} 
-	\caption{GoalManagement. This figure show the goal states in his life-cycle. \todo[inline]{this figure is not used in any part of the text}}
+	\caption{GoalManagement. This figure show the goal states in his life-cycle.}
 	\label{fig:GoalManager}
 \end{figure}
 
 The goals the agent knows are those  delegated by the script and those that are attached to the robotic behaviour, like recharge batteries or preserve its own integrity. These goals receive the name of potential goals. 
 
-When a potential goal satisfies its preconditions the goal becomes an active goal. At this point, the agent check if are exists the abilities and resources needed to complete the goal. If not, the goal remains as a potential goal. If there is enough tools and resources the goal becomes a viable goal. \todo[inline]{how is this done?} 
+When a potential goal satisfies its preconditions the goal becomes an active goal. At this point, the agent check if exists the abilities and resources needed to complete the goal. If not, the goal remains as a potential goal. If there is enough tools and resources the goal becomes a viable goal. \todo[inline]{how is this done?} 
 
 Finally to the decide what of the viable goals becomes an intention, they compete in two aspects. First, the goals compete by priority, the agent with maximum priority wins. If there is more than one in the maximum priority the goals compete with their contribution values and probability of success (which is an estimated).
 
