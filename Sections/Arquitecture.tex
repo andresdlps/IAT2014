@@ -1,4 +1,4 @@
-The architecture was built through the iterative methodology AOPOA, \todo[inline]{it is missing a reference to the AOPOA methodology} which allows the decomposition of goals in smaller goals until the desired granularity is reached. The starting point was the global agent's goal to perform a sequence of actions coherent, given a script. This section describes the final result of this methodology showing in the Figure~\ref{fig:generalArchitecture}, where is shown the four modules that compound it: configuration, action, belief, and motivation.
+The architecture was built through the iterative agent design methodology AOPOA, which allows the decomposition of goals in smaller goals until the desired granularity is reached\cite{GonzalezBustacara}. The starting point was the global agent's goal to perform a sequence of actions coherent, given a script. This section describes the final result of this methodology showing in the Figure~\ref{fig:generalArchitecture}, where is shown the four modules that compound it: configuration, action, belief, and motivation.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{Images/GeneralArchitecture.png} 
@@ -11,5 +11,5 @@ This module handles has and update the mental state of the robot-actor. This goa
 The motivation manager is in charge of the deliberative process, in other words  this group is responsible for the big question: what should the agent do?. The design of this group has done in concordance with the belief-desired-intention model but also, incorporate a communication manager that allow the coordination between robo-actors when it is required.
 \subsubsection{Action Controller}
 The action controller manages all the process of action selection, and the modulation of the actions to convey emotions. This modulation is done using the agent's emotional state. In this way the emotional state does not interfere in the decision process.
-\subsection{Configuration Module}
+\subsubsection{Configuration Module}
 Configuration module has all the information that are necessary to perform emotional actions, and the description of the script that the robot has to follow.
